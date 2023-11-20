@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Dom</h1>
+    <p><b>Document object model</b> è in realtà dell'oggetto window e rappresenta l'intera struttura html caricata nella mia pagina,
+    ha una struttra a oggetto. Il DOM fornisce una rappresentazione gerarchica di oggetti, che viene spesso chiamata <b>Dom tree</b> 
+    (assomiglia a un albero genealogico). Questo albero di oggetti è accessibile tramite javascript, infatti possiamo fare:</p>
+    <ul>
+        <li>leggere gli elementi del DOM</li>
+        <li>modificare la struttura degli elementi (tag)</li>
+        <li>modificare il contenuto degli elementi (tag)</li>
+        <li>modificare lo stile</li>
+    </ul>
+    <p>Il DOM si presenta come un albero con una serie di <b>nodi</b> che hanno diversi tipi</p>
+    <table>
+        <tr>
+            <th>Tipo di nodo</th>
+            <th>Descrizione</th>
+            <th>Esempio</th>
+        </tr>
+        <tr>
+            <td>documento</td>
+            <td>La radice del mio albero, normalmente ne esiste solo, ma se uso tag &lt;frame&gt; (es. youtube, googleMaps) 
+                ci sono più nodi di tipo doumento in una pagina.
+            </td>
+            <td><code>&lt;html&gt;</code></td>
+        </tr>
+        <tr>
+            <td>elemento</td>
+            <td>individua un tag html</td>
+            <td>&lt;body&gt; &lt;div&gt; &lt;p&gt;</td>
+        </tr>
+        <tr>
+            <td>attributo</td>
+            <td>un nodo di tipo attributo corrisponde ad un attributo di un tag html</td>
+            <td>ad esempio l'attributo src del tag img; l'attributo href del tag a</td>
+        </tr>
+        <tr>
+            <td>testo</td>
+            <td>contenuto testuale di un tag</td>
+            <td>lorem ipsum</td>
+        </tr>
+        <tr>
+            <td colspan="3">Nelle specifche W3C esistono altri tipi nodi: ad esempio commento, ad esempio document type, ma li trascuriamo
+                perché non faremo mai manipolazioni javascript su questi tipi di nodo
+            </td>
+        </tr>
+        <h2>Manipolare il DOM via javascript</h2>
+        <ol>
+            <li>Selezionare un elemento del DOM</li>
+            <li>Modificare lo "style" di un elemento</li>
+            <li>Modificare le classi di un elemento</li>
+            <li>Modificare il contenuto di un elemento</li>
+            <li>Creare e inserire e rimuovere degli elementi nel DOM</li>
+        </ol>
+    </table>
+</body>
+</html>

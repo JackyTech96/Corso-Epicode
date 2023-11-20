@@ -1,0 +1,100 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    background-image: url(img/sfondo.png);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    padding: 15px;
+    background-position: center center;
+}
+
+/* HEADER */
+
+header {
+    background-image: linear-gradient(#0096C2, #076A86);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1.5em;
+    padding: 2em 1.5em;
+}
+
+header div img {
+    margin-bottom: 20px;
+}
+
+header nav {
+    text-align: center;
+    color: white;
+}
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN */
+main {
+    background-color: white;
+    padding: 2em 1em;
+    margin-bottom: 1.5em;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+ul,
+ol {
+    margin-left: 2em;
+}
+
+.autore {
+    color: grey;
+}
+
+span {
+    color: #a02571;
+    font-weight: bold;
+
+}
+
+code {
+    border: 1px solid #000;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+iframe {
+    border-radius: 20px;
+}
+
+/* TABELLE */
+caption {
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+thead {
+    color: white;
+    background-color: #3e64cc;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody {
+    border-bottom: 1px solid grey;
+}
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */

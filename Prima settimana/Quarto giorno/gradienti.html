@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradienti</title>
+    <style>
+        #grad1,
+        #grad2,
+        #grad3,
+        #grad4,
+        #grad5,
+        #grad6 {
+            height: 100px;
+            width: 400px;
+            margin: 10px;
+        }
+
+        #grad1 {
+            background-image: linear-gradient(red, black);
+        }
+
+        #grad2 {
+            background-image: linear-gradient(to right, red, black);
+        }
+
+        #grad3 {
+            background-image: linear-gradient(to bottom right, red, black);
+        }
+
+        #grad4 {
+            background-image: linear-gradient(to right, violet, red, orange, yellow, green, blue, indigo);
+        }
+
+        #grad5 {
+            background-image: repeating-linear-gradient(45deg, red 0px, red 10px, yellow 10px, yellow 20px)
+        }
+
+        #grad6 {
+            background: rgb(238, 174, 202);
+            background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(255, 251, 215, 1) 49%, rgba(206, 251, 242, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grad1"></div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <div id="grad4"></div>
+    <div id="grad5"></div>
+    <div id="grad6"></div>
+</body>
+
+</html>

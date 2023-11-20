@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+
+<body>
+    <h2>Le variabili</h2>
+    <p>Servono per memorizzare dei valori</p>
+    <p>Ogni variabile è identificata da un nome che segue alcune regole:</p>
+    <ul>
+        <li>niente spazi, niente trattini -, niente caratteri speciali (? , )</li>
+        <li>deve iniziare con una lettera, sono ammessi anche underscore e dollaro _, $</li>
+        <li>sono case sensitive</li>
+        <li>non può iniziare con un numero</li>
+        <li>non deve mai coincidere con le keywords di javascript (if, else, switch, return, true, false)</li>
+    </ul>
+    <script>
+        // esempi sulle regole di naming delle variabili
+        // keyword per memorizzare dei valori -> var, let, const
+        /*
+        var DeAmbrosis si -> camel case sostituisco quello che sarebbe lo spazio biango con la maiuscola sulla seconda parola
+        var De_Ambrosis si
+        var De Ambrosis no
+        var deAmbrosis si(diverso)
+        var Deambrosis si
+        var 1Deambrosis no
+        var De-Ambrosis no
+        var Deambrosis1 si
+        */
+    </script>
+    <h3>Dichiarazione implicita delle variabili</h3>
+    <p>Non è obbligatorio dichiarare le variabili, cioè fare un'operazione esplicita di creazione<br>
+        quando c'è l'identicatore = l'engine crea implicitamente la variabile se non esiste già</p>
+    <script>
+        var miaVariabile;
+        // dichiaro una variabile (possiamo contestualmente assegnare un valore)
+        // quando dichiaro una variabile stabilisco uno scope
+        // scope è l'ambito di accessibilià della variabile (in che punto del codice posso usare i valori memorizzati)
+        variabile = 3; // questa pratica può favorire errori e ambiguità
+        // una variabile non dichiarata si crea al primo utilizzo ed è accessibile ovunque nello script
+        // sconsigliato: quando il codice diventa complesso può succedere di usare in punti diversi variabili con lo stesso nome
+        // -> genera comportamenti imprevisti -> dichiariamo sempre una variabile con la sua keyword
+    </script>
+    <h3>Strict mode</h3>
+    <p>E' un'opzione di controllo del codice, EcmaScript 5 -> se viene dichiarato lo strict mode javascript viene
+        eseguito osservando delle regole di scrittura del codice più strette -> es. ci arriva segnalazione di errore se
+        non dichiariamo le variabili
+        Nell'esecuzione "normale" javascript ha delle regole più permissive che se dichiariamo lo strict mode ci
+        obbligano a uno stile di programmazione più strutturato</p>
+    <script>
+        "use strict" //dicitura per abilitare lo strict mode     </script>
+    <h3>Var, let, const</h3>
+    <p>var è la prima keyword usata da javascript per usare una variabile, var è accessibile in qualunque parte dello
+        script (variabile globale)</p>
+    <p>let introdotta da Ecmascript6 è accessibile soltanto in un determinato ambito (scope) che è delimitato da un
+        blocco di codice</p>
+    <p>Un blocco di codice javascript è una serie di istruzioni delimitate da { .. blocco di codie }</p>
+    <h4>const</h4>
+    <p>Introdotte da EcmaScript 6 -> istruisce l'engine che il valore assegnato non è modificabile</p>
+    <script>
+        const PIGRECO = 3.14; // garantisce l'utilizzo in sola lettura del valore 
+        // var pigreco = 3.14; // modificabile. la prassi vuole che si scriva in maiuscolo un valore non modificabile.
+        // la keyword var invece garantisce l'accesso in scrittura (e quindi di sovrascrivere i valori)
+        // la differenza è che const non posso riassegnare valori   
+        const PI = 3.14;
+        // PI = 3.14 // errore
+        // PI = PI + 10 // errore
+
+        var x = 10; // qui x è 10
+        {
+            const x = 2; // qui x è 2
+        }
+        // se richiamo x qui fuori sarà 10 (perché const come let valgono solo nel blocco di codice)
+    </script>
+
+</body>
+
+</html>

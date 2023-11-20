@@ -1,0 +1,118 @@
+/* unità di misura */
+p {
+    font-size: 30px;
+
+}
+
+/* esiste pt */
+
+p {
+    font-size: 1em;
+}
+
+/* proporzionale rispetto all'elemento parent */
+p {
+    font-size: 1.1rem;
+}
+
+/* proporzionale rispetto alla root(radice) */
+div {
+    /* width:300px;*/
+    width: 50%;
+    margin-left: 25%;
+}
+
+/* % è proporzionale all'elemento parent */
+
+/* vw viewport width -> proporzionale alla larghezza del device -> 100vw largo come tutto il device
+    vh viewport height -> proporzionale all'altezza del device -> 50vh alto come metà della viewport del device */
+
+/* em e rem di solito utilizzati per i p */
+/* % e vw/vh di solito utilizzati per i contenitori */
+
+/* 
+p {font-size:90%} -> 16px -> p 14.4
+p {font-size:0.9em} -> div è 16px -> p 14.4
+p {font-size:0.9rem} -> body è 16px -> p 14.4
+p {font-size:0.9vw} -> viewport 1400 (0.9% di 1400) 
+*/
+/* colori */
+article p {
+    color: blueviolet
+        /* keyword */
+
+}
+
+
+
+article p {
+    color: #ff0000;
+}
+
+/* esadecimale r g b */
+article p {
+    color: #f00
+        /* esadecimale sintetico (solo se tutte le tre coppie hanno gli stessi valori */
+}
+
+
+article p {
+    color: #0f0
+}
+
+article p {
+    color: #00f
+}
+
+article p {
+    color: rgb(0, 0, 255)
+        /* rgb */
+}
+
+article p {
+    color: rgb(0, 0, 255, 0.5)
+        /* rgb + opacità -> valori rgb + valore alpha (opacità) valori da 0 a 1 */
+}
+
+/* font */
+section p {
+    font-family: 'Courier New', Courier, monospace
+}
+
+section p {
+    font-family: 'roboto', sans-serif;
+}
+
+/* formattazione di testi */
+#secondo {
+    font-size: 1.1em;
+    /* possiamo usare anche rem meglio che px */
+    font-style: italic;
+    /* corsivo -> normal */
+    font-weight: bold;
+    /*grassetto -> normal */
+    line-height: 1.5;
+    /* interlinea(spazio tra le righe) valori da 0 in su */
+}
+
+div p {
+    color: blue;
+    text-align: center;
+    /* left (default, right, justify */
+    text-indent: 2em;
+    /*identatura cioè rientro della prima linea */
+    text-transform: uppercase;
+    /* tutto maiuscolo, valore di default lowercase */
+}
+
+/* aggiungere ombre */
+div h1 {
+    text-shadow: 4px 4px 8px #0f0;
+    /*
+    1° valore scostamento orizzontale
+    2° valore scostamento verticale
+    3° valore raggio della sfocatura
+    4° valore spread ombra
+    5° valore colore
+    */
+}

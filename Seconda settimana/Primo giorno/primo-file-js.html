@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo file js</title>
+</head>
+
+<body>
+    <!-- Come inserire js in una pagina -->
+    <h2>Inserire codice inline</h2>
+    <p>Posso inserire direttamente le istruzioni javascript in un elemento HTML,
+        assegnandolo a un attributo che rappresenta un evento
+    </p>
+    <button type="button" onclick="alert('ciao!')">Cliccami</button>
+    <!--
+        abbiamo assegnato all'attributo onclick dell 'elemto button la stringa alert('ciao')
+        l'attributo onclick rappresenta l'evento del click sul pulsante del mouse
+        quindi in corrispondenza dell'evento viene analizzato il codice javascript assegnato
+        in questo caso alert è una keyword che mostra un box con la scritta ciao!
+    -->
+    <p>Altro approccio per inserire codice inline, ma è valido solo per i link</p>
+    <a href="javascript:alert('ciao!')">Cliccami</a>
+    <!--
+        In questo caso indichiamo al browser di interpretare il link come la richiesta di esecuzione del codice javascript specificato (javascript: -> non apro il link MA eseguo il codice)
+    -->
+    <h2>Inserisco blocchi di codice</h2>
+    <p><strong>Pro</strong>: nel caso abbiamo poco codice javascript metto in relazione subito il codice da eseguire con
+        il suo tag Html</p>
+    <p><strong>Contro</strong>: nel caso il codice sia minimamente complesso (variabile, funzioni, oggetti) non risulta
+        comodo</p>
+    <script>alert('ciao!')</script>
+    <!-- il parser html del broswer esamina la pagina, riconosce il tag <script> e passa il contenuto all'engine js che lo esegue -->
+    <p><code>Tag head o tag body?</code> primo ordine di considerazione -> performance;
+        secondo ordine di considerazione -> che il tag su cui js interagisce sia già stato parsato (letto e quindi
+        disponibile)
+        -> questo spiega perché tante volte troviamo gli script in fondo alla pagina prima di <code>&lt;/body&gt;</code>
+    </p>
+    <h2>Inserisco javascript esterno</h2>
+    <p> Approccio più consigliato, Consiste nel collegare a una pagina html uno script presente in un file esterno<br>
+        Il <strong>grande</strong> vantaggio è la separazione tra struttura e la programmazione, tra cos'è un tag e cosa
+        deve fare</p>
+    <script src="script.js"></script>
+    <!-- uso il percorso relativo come sempre + collego prima di <code>&lt;/body&gt;</code> -->
+    <!-- <script src="https://www.server.com/js/codice.js"></script>--> <!-- posso collegare un file esterno -->
+
+    <!-- ++++++++++++++ Console +++++++++++++++ -->
+    <h2>Oggetto console</h2>
+    <p>La console è uno strumento fondamentale per scrivere codice javascript (per qualsiasi linguaggio di
+        programmazione)</p>
+    <p>La console ci permette di fare il debug, cioè ci permette di controllare il flusso del nostro codice</p>
+    <p>Spesso la console si usa per tenere traccia dell'evoluzione del programma o verificare dei valori</p>
+    <p>Per vedere la console tasto destro -> ispezione -> console</p>
+    <script>
+        // console.log("ciao mondo");
+        var a = 'pippo';
+        console.log('a è uguale a ' + a);
+
+        let numero1 = 5;
+        let numero2 = 7;
+        console.log(numero1 + numero2); //12
+        console.log(numero1 - numero2); // -2
+        console.log(numero2 + 4); // 11
+    </script>
+
+</body>
+
+</html>

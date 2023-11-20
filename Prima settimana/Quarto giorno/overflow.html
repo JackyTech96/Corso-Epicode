@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* overflow */
+        div.ex1,
+        div.ex2,
+        div.ex3,
+        div.ex4 {
+            background-color: aquamarine;
+            height: 110px;
+            width: 110px;
+        }
+
+        div.ex1 {
+            overflow: scroll
+        }
+
+        /* aggiunge la scroll */
+
+        div.ex2 {
+            overflow: hidden;
+        }
+
+        /*nasconde il testop che eccede */
+
+        div.ex3 {
+            overflow: auto;
+        }
+
+        /*aggiunge la scroll solo se necessaria */
+        div.ex4 {
+            overflow: visible;
+        }
+
+        /* il testo che eccede è visivile (default) */
+
+        /* word break */
+        p {
+            width: 120px;
+            border: 1px solid #000;
+        }
+
+        .uno {
+            word-break: normal;
+        }
+
+        /* la parola eccede il contenitore */
+        .due {
+            word-break: keep-all;
+        }
+
+        /* la parola va a capo solo se eccede con i trattini */
+        .tre {
+            word-break: break-all;
+        }
+
+        /* va a capo sempre */
+
+        /* word-wrap */
+        /* normal -> (default) non spezza la parola che eccede
+        break-word -> spezza la parola che eccede */
+    </style>
+</head>
+
+<body>
+    <h1>Proprietà overflow</h1>
+    <h2>overflow: scroll</h2>
+    <div class="ex1">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+        Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese
+        una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di
+        cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso
+        popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano
+        passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva
+        versioni del Lorem Ipsum.
+    </div>
+    <h2>overflow: hidden</h2>
+    <div class="ex2">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+        Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese
+        una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di
+        cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso
+        popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano
+        passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva
+        versioni del Lorem Ipsum.
+    </div>
+    <h2>overflow: auto</h2>
+    <div class="ex3">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+        Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo
+        prese
+        una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di
+        cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu
+        reso
+        popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano
+        passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che
+        includeva
+        versioni del Lorem Ipsum.
+    </div>
+    <h2>overflow: visible</h2>
+    <div class="ex4">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem
+        Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese
+        una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di
+        cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso
+        popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano
+        passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva
+        versioni del Lorem Ipsum.</div>
+    <h1>Word-break</h1>
+    <p class="uno">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+    <p class="due">Precipitevolissimevolmente è la parola-più-lunga-dell'alfabeto-italiano</p>
+    <p class="tre">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+</body>
+
+</html>

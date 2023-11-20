@@ -1,0 +1,80 @@
+body {
+    /* Sfondo a gradiente */
+    background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    /* Imposta il testo in bianco per una migliore leggibilità */
+    color: white;
+    /* Rendi l'altezza del body del 100% della finestra */
+    height: 100vh;
+    /* Imposta il margin a 0 per rimuovere lo spazio attorno al body */
+    margin: 0;
+    /* Imposta il display di flessione e allinea il contenuto al centro sia verticalmente che orizzontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    /* Aumenta le dimensioni del form */
+    width: 40vw;
+    padding: 20px;
+    /* Aggiunge padding al form */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Sfondo del form con opacità */
+    border-radius: 10px;
+    /* Bordo arrotondato */
+    text-align: center;
+}
+
+input {
+    /* Aumenta le dimensioni del campo di input */
+    width: 70%;
+    /* Larghezza dell'input */
+    padding: 10px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    /* Aggiunge margine inferiore al campo di input */
+    display: inline-block;
+    /* Imposta l'input come inline-block */
+}
+
+#btn {
+    /* Cambia il colore del pulsante */
+    background-color: #08f4f4;
+    /* Colore rosso */
+    color: black;
+    /* Testo bianco */
+    border: none;
+    /* Rimuovi il bordo */
+    padding: 10px 20px;
+    /* Aggiungi padding al pulsante */
+    border-radius: 5px;
+    /* Bordo arrotondato */
+    cursor: pointer;
+    /* Cambia il cursore quando si passa sopra il pulsante */
+    display: inline-block;
+    /* Imposta il pulsante come inline-block */
+}
+
+#btn:hover {
+    /* Cambia il colore del pulsante quando si passa sopra di esso */
+    background-color: #08bcbc;
+    /* Tonalità più scura di rosso */
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: #c5e1e6;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.tasks-completed {
+    text-decoration: line-through;
+}

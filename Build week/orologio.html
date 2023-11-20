@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Timer</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .timer-container {
+            position: relative;
+        }
+
+        .timer {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .progress {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+            background-color: #3498db;
+            transform-origin: 100% 50%;
+            transform: rotate(90deg);
+        }
+
+        .time {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer-container">
+        <div class="timer">
+            <div class="progress"></div>
+            <div class="time">10</div>
+        </div>
+    </div>
+    <script>
+        let time = 10; // Set the initial time in seconds
+        let timerInterval;
+
+        function updateTimer() {
+            const progress = document.querySelector('.progress');
+            const timeDisplay = document.querySelector('.time');
+
+            const percentage = (time / 10) * 100; // Adjust the denominator based on the initial time
+
+            progress.style.transform = `rotate(${360 - (percentage * 3.6)}deg)`;
+            timeDisplay.textContent = time;
+
+            if (time === 0) {
+                clearInterval(timerInterval);
+                alert("Timer finished!");
+            } else {
+                time--;
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        startTimer();
+
+    </script>
+</body>
+
+</html>

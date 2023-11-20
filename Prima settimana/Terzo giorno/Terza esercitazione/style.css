@@ -1,0 +1,85 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* +++++++++++ Header ++++++++++ */
+.logo {
+    width: 200px;
+    margin: 1rem 0;
+}
+
+header {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+nav {
+    border-top: 1px solid #ffe386;
+    background-color: #fafaeb;
+    color: rgb(16, 119, 119);
+    padding: 1rem
+}
+
+strong {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+article {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+.focaccia {
+    border-radius: 20px;
+}
+
+figcaption {
+    color: gray;
+    text-align: center;
+}
+
+aside {
+    border-left: 2px solid #d3d020;
+    margin-bottom: 50px;
+    padding-left: 10px;
+}
+
+.featured {
+    color: rgb(179, 7, 7);
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+a:link {
+    color: rgb(16, 119, 119);
+
+}
+
+a:visited {
+    color: rgb(16, 119, 119);
+}
+
+h2 {
+    border-bottom: 1px solid rgb(202, 255, 255);
+}
+
+ol li {
+    font-weight: bold;
+}
+
+li {
+    line-height: 2;
+}
+
+.preparazione {
+    margin-left: 45px;
+}

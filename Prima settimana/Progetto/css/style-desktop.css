@@ -1,0 +1,187 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #25a2c3;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* HEADER */
+
+.banner {
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #25a2c3;
+    margin: 2rem;
+}
+
+header {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 1.5em;
+}
+
+header div img {
+    width: 120px;
+}
+
+nav {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #f04c2f;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+
+/* ELEMENTI NEL MAIN - 1° ARTICLE */
+
+.first {
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
+
+.content {
+    margin-bottom: 2rem;
+}
+
+
+#notebook {
+    width: 200px;
+    border-radius: 200px;
+    margin-bottom: 2rem;
+}
+
+/* dovrei usare float per spostare la 1° section a destra dell'immagine? */
+
+/* BLOCKQUOTE */
+
+.testimonials {
+    background-color: #e22d0e;
+    color: white;
+    padding: 3.3em;
+    text-align: center;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1em;
+}
+
+.autor {
+    font-size: 1.2rem;
+}
+
+.job {
+    font-size: 0.8rem;
+}
+
+/* 2° ARTICLE */
+.second {
+    width: 350px;
+}
+
+
+.second {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card {
+    display: inline-block;
+    border: 1px solid #dee1e3;
+    margin: 1.5em;
+    border-radius: 5px;
+    width: 200px;
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.description-card {
+    padding: 2em;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #25a2c3;
+    color: white;
+    text-align: center;
+    padding: 5rem;
+    max-width: 100vw;
+}
+
+footer a {
+    color: #c8e7f0;
+}
+
+hr {
+    width: 50%;
+}
+
+ul {
+    margin: 0.8em;
+    list-style-type: none;
+}
+
+i {
+    margin-right: 0.5em;
+}
+
+footer p {
+    font-size: 1em;
+}

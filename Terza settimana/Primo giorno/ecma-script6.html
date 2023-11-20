@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecma script 6</title>
+</head>
+<body>
+    <h2>EcmaScript 6</h2>
+    <p>Con l'avvento di EcmaScript6 una serie di novità importanti è stata introdotta nel linguaggio.</p>
+    <ul>
+        <li><b>Già viste</b></li>
+        <li>let e const</li>
+        <li>Nuovi metodi della libreria Math</li>
+        <li>arrow function =></li>
+        <li><b>Vedremo oggi</b></li>
+        <li>Operatore spread</li>
+        <li>Parametri rest</li>
+        <li>Destrutturazione array|oggetti</li>
+        <li>Template literals</li>
+        <li>Nuovi metodi degli array</li>
+        <li><b>Vedrete più avanti (7à settimana)</b></li>
+        <li>Class</li>
+        <li>Promises</li>
+    </ul>
+    <h2>Operatore spread</h2>
+    <p>L'operatore spread condivide con i parametri rest una particolare sintassi: i tre puntini <code>...</code><br>
+    <b>spread</b> in inglese significa espandere|diffondere. Con l'<code>operatore spread</code> posso espandere un array|oggetto
+    per estrarne i dati e renderli disponibili in ambiti diversi (li passo come parametri a una funzione, creo un nuovo array etc.)</p>
+    <p><b>Sintassi spread</b></p>
+    <script>
+        // esempio 1: in una funzione
+        function mia_funzione(a, b, c) {
+            console.log(a, b, c);
+        }
+        let valori = ["Ecco", "l'operatore", "spread"];
+        mia_funzione(...valori); // Ecco l'operatore spread
+        // i valori vengono estratti e utilizzati come se li avessi inseriti uno a uno separandoli con la virgola
+
+        // esempio 2: in un array -> semplifica la creazione di array
+        // usiamo l'operatore spread per estrarre tutti i dati di un array e inserirli in un altro
+        var lista_a = [0, 1, 2];
+        var lista_b = [...lista_a, 3, 4, 5];
+        console.log(lista_b); // [0, 1, 2, 3, 4, 5]
+
+        // esempio 2b: possiamo usare l'operatore spread dove vogliamo e anche più volte
+        let giorniLavorativi = ["lun", "mar", "mer", "gio", "ven"];
+        let fineSettimana = ["sab", "dom"];
+        let settimana = [...giorniLavorativi, ...fineSettimana];
+        console.log(settimana); // ["lun", "mar", "mer", "gio", "ven", "sab", "dom"]
+
+        /* Quando copio un array array_a = array_b  -> sto copiando un riferimento al primo array 
+                                                    -> le due variabili sono collegate
+                                                    -> ogni modifica a una variabile è visibile nell'altra 
+           Con l'operatore spread INVECE faccio quelle che si chiamano copie superficiali -> non si modifica l'originale */
+        let originale = [0, 1, 2];
+        let copiaRiferimento = originale;   // copia del riferimento
+        let copiaValori = [...originale];   // faccio la copia superficiale // shallow copy
+        originale.push(3);
+        console.log(copiaRiferimento);      // [0, 1, 2, 3]
+        console.log(copiaValori);           // [0, 1, 2]    // la modifica dell'originale non ha avuto effetto
+
+        // esempio3: in un oggetto
+        let utenteBase = {
+            nome: "",
+            password: "",
+        };
+        let amministratore = {
+            ...utenteBase,
+            nome: "admin",
+            permessi: [],
+        };
+    </script>
+    
+    <h2>Parametro rest</h2>
+    <p><b>Rest</b> in inglese significa resto|restante. Con <code>Parametro rest</code> raccogliamo un numero 
+        non definito di parametri in un array</p>
+    <p>Quando dichiariamo una funzione indichiamo il numero di parametri -> anche perché tendenzialmente sono quelli che valorizziamo.<br>
+    in alcune funzioni ci capiterà di vedere n parametri, <em>i parametri delle funzioni vengono inseriti in array <code>arguments</code<br>
+        che in realtà è un tipo speciale di oggetto.</em> Con i parametri rest <code>...</code> quando dichiaro i parametri di una f 
+    possiamo racchiudere tutti i paramentri di troppo</p>
+    <p><b>Schema sintattico</b></p>
+    <script>
+        function parametriRest(primo, secondo, ...altri) {
+            console.log(primo); // primo
+            console.log(secondo); // secondo
+            console.log(altri); // ['terzo', 'quarto', ...] // con l'operatore spread stampo l'array degli altri parametri
+            console.log(arguments); // arguments è la keyword associata ai paramentri di una funzione // non è più molto in uso
+        }
+        parametriRest("primo", "secondo", "terzo", "quarto", "quinto");    // quando invoco la funzione valorizzo i parametri
+    </script>
+
+    <h2>Assegnamento di destrutturazione</h2>
+    <p>Le strutture js più utilizzate sono oggetti e array.<br>A volte può non essere necessario tutto l'oggetto|array ma solo una parte</p>
+    <p>L'assegnamento di destrutturazione è una sintassi che ci permette di spacchettare oggetti|array</p>
+    <script>
+        let arr = ["Federico", "De Ambrosis"];  // array con nome e cognome
+        let [firstName, surname] = arr;         // assegnamento di destrutturazione 
+                                                // imposta firstName = arr[0] e surname = arr[1]
+        alert(firstName);                       // mi mette nell'alert Federico
+        alert(surname);                         // mi mette nell'alert De Ambrosis
+        //let [firstName, surname] = "Federico DeAmbrosis".split(' ');   // metodo array che vedremo tra poco -> divide 
+    </script>
+    <p>1. <b>Destruttura</b> non distrugge! In singoli elementi vengono copiati dentro a delle variabili ma l'array originale 
+    non viene modificato</p>
+    <p>2. Posso ignorare degli elementi usando la virgola</p>
+    <script>
+       // let [firstName, , titolo] = ["Federico", "De Ambrosis", "docente"]; 
+       // alert(titolo)   // il secondo elemento viene saltato, il terzo assegnato a titolo 
+    </script>
+    <p>3. Funziona con qualsiasi iterabile (array, stringhe)</p>
+
+    <h2>Template literals</h2>
+    <p>Si tratta di una sintassi per comporre stringhe complesse</p>
+    <p>Ci capiterà di avere stringhe di output che vanno ad esempio su più righe, che portano diverse variabili da concatenare</p>
+    <p>Ad esempio potrebbe capitarci una stringa così</p>
+    <script>
+        var messaggio = "Attenzione il valore inserito " + valore + "non è valido perché deve essere compreso tra " + valoreIniziale 
+    </script>
+</body>
+</html>
