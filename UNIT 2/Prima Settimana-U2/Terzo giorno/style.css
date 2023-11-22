@@ -63,11 +63,12 @@ header .logo {
 
 .flex {
   display: flex;
-  height: calc(100vh - var(--nav-height));
 }
 
 main {
   flex-grow: 1;
+  height: calc(100vh - var(--nav-height));
+  overflow-y: auto;
 }
 
 aside {

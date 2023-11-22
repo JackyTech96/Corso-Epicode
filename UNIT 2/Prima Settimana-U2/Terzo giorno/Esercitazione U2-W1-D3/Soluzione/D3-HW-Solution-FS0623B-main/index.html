@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #6b2b06;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      .card {
+        max-width: 300px;
+        background-color: #fbf7e3;
+        border-radius: 80px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        padding: 1.5rem 1.5rem 1rem;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        min-height: 300px;
+        object-fit: cover;
+      }
+
+      .card button {
+        font-family: inherit;
+        font-weight: 600;
+        color: inherit;
+        font-size: 1rem;
+        border: none;
+        background-color: #f3df85;
+        padding: 0.5rem 2.5rem;
+        border-radius: 100px;
+      }
+
+      .description {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-block-end: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      .description > div h4 + span {
+        letter-spacing: -0.6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <img src="./assets/imgs/honey.jpg" alt="honey jar" />
+      <div class="card-body">
+        <div class="description">
+          <div>
+            <h4>100% Bio Honey</h4>
+            <span>Italian, not treated</span>
+          </div>
+          <div>
+            <span>7$/kg</span>
+          </div>
+        </div>
+        <button>Add to cart</button>
+      </div>
+    </div>
+  </body>
+</html>
